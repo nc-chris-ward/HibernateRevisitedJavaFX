@@ -5,24 +5,18 @@ import javafx.geometry.Rectangle2D;
 import javafx.stage.Screen;
 import javafx.stage.Stage;
 import northcoders.hibernaterevisitedjavafx.config.HibernateConfig;
-import northcoders.hibernaterevisitedjavafx.model.Department;
-import northcoders.hibernaterevisitedjavafx.model.University;
-import northcoders.hibernaterevisitedjavafx.repository.H2Repository;
 import northcoders.hibernaterevisitedjavafx.view.ClassMenu;
-import org.h2.security.auth.impl.JaasCredentialsValidator;
 import org.h2.tools.Server;
-import org.hibernate.SessionFactory;
 import org.hibernate.Session;
+import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
-
-import java.util.ArrayList;
 
 
 public class RuntimeHibernateApplication extends Application {
 
     public static void main(String[] args) {
         startH2Console();
-        customPersist();
+//        customPersist();
         launch(args);
 
     }
@@ -62,23 +56,10 @@ public class RuntimeHibernateApplication extends Application {
         Session session = sessionFactory.openSession();
         Transaction transaction = null;
 
-        Department department = new Department();
-        department.name = "dbjak";
-
-        University uni = new University();
-        uni.name = "EBJK";
-
-        uni.departments = new ArrayList<>();
-        uni.departments.add(department);
-
-        department.university = uni;
-
         try {
             transaction = session.beginTransaction();
 
             // IN OUR SESSION
-
-            session.persist(uni);
 
             transaction.commit();
         } catch (Exception e) {

@@ -16,7 +16,7 @@ public class Department {
     @OneToMany(mappedBy = "department")
     public List<Staff> staff;
 
-    @ManyToOne(cascade = CascadeType.ALL)
+    @ManyToOne
     @JoinColumn(name = "university_id")
     public University university;
 

@@ -5,33 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a5bf1cc0-a84d-4654-a302-45cf2e27c8fb" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/git_toolbox_blame.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.mvn/wrapper/maven-wrapper.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.mvn/wrapper/maven-wrapper.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mvnw" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mvnw.cmd" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/module-info.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/northcoders/hibernaterevisitedjavafx/RuntimeHibernateApplication.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/northcoders/hibernaterevisitedjavafx/RuntimeHibernateController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/northcoders/hibernaterevisitedjavafx/config/HibernateConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/northcoders/hibernaterevisitedjavafx/model/Department.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/northcoders/hibernaterevisitedjavafx/model/Staff.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/northcoders/hibernaterevisitedjavafx/model/University.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/northcoders/hibernaterevisitedjavafx/repository/H2Repository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/northcoders/hibernaterevisitedjavafx/util/ReflectionUtils.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/northcoders/hibernaterevisitedjavafx/view/ClassMenu.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/northcoders/hibernaterevisitedjavafx/view/ObjectCreationMenu.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/logback.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/northcoders/hibernaterevisitedjavafx/hello-view.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/northcoders/hibernaterevisitedjavafx/RuntimeHibernateApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/northcoders/hibernaterevisitedjavafx/RuntimeHibernateApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/northcoders/hibernaterevisitedjavafx/RuntimeHibernateController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/northcoders/hibernaterevisitedjavafx/model/Department.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/northcoders/hibernaterevisitedjavafx/model/Department.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/northcoders/hibernaterevisitedjavafx/repository/H2Repository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/northcoders/hibernaterevisitedjavafx/repository/H2Repository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/northcoders/hibernaterevisitedjavafx/view/ClassMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/northcoders/hibernaterevisitedjavafx/view/ClassMenu.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/northcoders/hibernaterevisitedjavafx/hello-view.fxml" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -51,9 +30,9 @@
   <component name="ProjectCodeStyleSettingsMigration">
     <option name="version" value="2" />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 3
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 3
+}</component>
   <component name="ProjectId" id="2q4uJOYQTAvJfsuyLHpLeQPOaVw" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
@@ -66,7 +45,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "git-widget-placeholder": "master",
+    "git-widget-placeholder": "main",
     "last_opened_file_path": "/Users/chris/Documents/GitHub/HibernateRevisitedJavaFX/src/main/resources"
   }
 }]]></component>

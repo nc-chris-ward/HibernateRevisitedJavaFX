@@ -1,21 +1,18 @@
 package northcoders.hibernaterevisitedjavafx.repository;
 
-import jakarta.persistence.JoinTable;
-import jakarta.persistence.ManyToOne;
-import jakarta.persistence.OneToMany;
-import javafx.scene.control.Alert;
+import jakarta.persistence.*;
 import javafx.scene.control.CheckBox;
 import javafx.scene.control.Control;
 import javafx.scene.control.TextField;
-import javafx.scene.text.Text;
-import javafx.stage.Window;
 import northcoders.hibernaterevisitedjavafx.config.HibernateConfig;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
 
 import java.lang.reflect.Field;
+import java.lang.reflect.ParameterizedType;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 import java.util.Map;
 
@@ -67,6 +64,29 @@ public class H2Repository {
                     List<Object> associatedEntities = new ArrayList<>();
                     for (String id : foreignKeyIds) {
                         Object associatedEntity = session.get(field.getType().getComponentType(), Integer.parseInt(id.trim()));
+                        associatedEntities.add(associatedEntity);
+                    }
+                    field.set(instance, associatedEntities);
+                }  else if (field.isAnnotationPresent(OneToOne.class)) {
+                    int foreignKeyId = Integer.parseInt(((TextField) inputControl).getText());
+                    Object associatedEntity = session.get(field.getType(), foreignKeyId);
+                    field.set(instance, associatedEntity);
+
+                    Field reverseField = Arrays.stream(associatedEntity.getClass().getDeclaredFields())
+                            .filter(f -> f.getType().equals(instance.getClass()))
+                            .findFirst()
+                            .orElse(null);
+                    if (reverseField != null) {
+                        reverseField.setAccessible(true);
+                        reverseField.set(associatedEntity, instance);
+                    }
+                }  else if (field.isAnnotationPresent(ManyToMany.class)) {
+                    String[] foreignKeyIds = ((TextField) inputControl).getText().split(",");
+                    ParameterizedType listType = (ParameterizedType) field.getGenericType();
+                    Class<?> entityClass = (Class<?>) listType.getActualTypeArguments()[0];
+                    List<Object> associatedEntities = new ArrayList<>();
+                    for (String id : foreignKeyIds) {
+                        Object associatedEntity = session.get(entityClass, Integer.parseInt(id.trim()));
                         associatedEntities.add(associatedEntity);
                     }
                     field.set(instance, associatedEntities);
